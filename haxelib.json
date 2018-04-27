@@ -1,0 +1,22 @@
+{
+  "name": "haxe react-native-firebase",
+  "license": "MIT",
+  "tags": [
+    "react",
+	"native",
+	"firebase",
+	"haxe",
+	"react-native"
+  ],
+  "classPath": "src",
+  "contributors": [
+    "Jarrio"
+  ],
+  "releasenote": "Initial release",
+  "version": "0.1.0",
+  "url": "https://github.com/jarrio/haxe-react-native-firebase",
+  "dependencies": {
+	"react-native": "",
+	"react-native-firebase": ""
+  }
+}
