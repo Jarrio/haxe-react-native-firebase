@@ -6,7 +6,9 @@ This has worked amazingly for me, but I have not tested it on recent versions of
 Known to be working:
 - Google Authentication (I used the react-native google sign-in package to create the button)
 - Real time database
-- Basic Messaging but did not fully test this
+
+Somewhat working:
+- Basic Messaging
 
 ---
 
