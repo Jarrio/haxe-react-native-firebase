@@ -11,5 +11,34 @@ Can't remember if working:
 - Messaging
 
 ---
+Quick startup:
+```haxe
+Firebase.app().onReady().then(
+  function(fireapp) {
+    this.fireapp = fireapp; //Save the response
+  }
+).catchError(
+  function(error) {
+    trace('Error: $error');
+  }
+);
+```
+
+Then just use as normal:
+
+```haxe
+this.fireapp.database().ref('database_name').once(
+  EventType.Value,
+  function (snapshot, str) {
+    trace(snapshot.child('foo').val());
+  },
+  function (reject) {
+    trace('error: $reject');
+  }
+);
+```
+---
+
+
 
 I wrote this up a fair little while ago so if there are issues, feel free to submit a PR or an issue and when I have time I'll give it a test
