@@ -7,8 +7,8 @@ Known to be working:
 - Google Authentication (I used the react-native google sign-in package to create the button)
 - Real time database
 
-Somewhat working:
-- Basic Messaging
+Can't remember if working:
+- Messaging
 
 ---
 
