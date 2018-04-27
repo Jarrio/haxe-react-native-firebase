@@ -1,7 +1,7 @@
 # haxe-react-native-firebase
 Externs for react-native firebase
 
-This has worked amazingly for me, but I have not tested it on recent versions of rn-firebase. The last known version I tested it on was "3.1.0". For setting this up - follow the documentation at <https://rnfirebase.io/docs/v3.1.x/getting-started>.
+This has worked amazingly for me, but I have not tested it on recent versions of rn-firebase. The last known version I tested it on was "3.1.0".
 
 Known to be working:
 - Google Authentication (I used the react-native google sign-in package to create the button)
@@ -11,6 +11,14 @@ Can't remember if working:
 - Messaging
 
 ---
+Follow the following links to use this library:
+
+1) <https://github.com/massiveinteractive/haxe-react>
+2) <https://github.com/haxe-react/haxe-react-native>
+3) <https://rnfirebase.io/docs/v3.1.x/getting-started>
+
+---
+
 Quick startup:
 ```haxe
 Firebase.app().onReady().then(
