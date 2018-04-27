@@ -27,7 +27,7 @@ Firebase.app().onReady().then(
 Then just use as normal:
 
 ```haxe
-this.fireapp.database().ref('database_name').once(
+this.fireapp.database().ref('table_name').once(
   EventType.Value,
   function (snapshot, str) {
     trace(snapshot.child('foo').val());
