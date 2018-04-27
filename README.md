@@ -12,4 +12,4 @@ Somewhat working:
 
 ---
 
-I wrote this up a fair little while ago so if there are issues, feel free to submit a PR or when I have time I'll give it a test
+I wrote this up a fair little while ago so if there are issues, feel free to submit a PR or an issue and when I have time I'll give it a test
