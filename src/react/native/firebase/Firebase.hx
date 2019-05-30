@@ -6,7 +6,7 @@ import react.native.firebase.FirebaseApp;
 import react.native.firebase.database.Database;
 import react.native.firebase.types.TFirebaseAppOptions;
 
-@:jsRequire('react-native-firebase/lib')
+@:jsRequire('firebase')
 extern class Firebase {
 	public static var apps:Array<FirebaseApp>;
 	public static function app(?name:String):FirebaseApp;	
