@@ -3,11 +3,11 @@ package react.native.firebase.firestore;
 /**
  * Describes whether we should get from server or cache.
  */
-abstract GetOptions(String) {
+@:enum abstract GetOptions(String) {
 	/**
 	 * Setting to default (or not setting at all), causes Firestore to try to retrieve an up-to-date (server-retrieved) snapshot, but fall back to returning cached data if the server can't be reached.
 	 */
-	var DEFAULT = "default";
+	var DEFAULT_OPT = "default";
 	/**
 	 * Setting to server causes Firestore to avoid the cache, generating an error if the server cannot be reached. Note that the cache will still be updated if the server request succeeds. Also note that latency-compensation still takes effect, so any pending write operations will be visible in the returned data (merged into the server-provided data).
 	 */

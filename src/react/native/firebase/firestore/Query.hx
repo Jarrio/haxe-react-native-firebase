@@ -11,7 +11,6 @@ extern class Query {
 	public var firestore:Firestore;
 
     public function new();
-
 	/**
 	 * Creates and returns a new Query that ends at the provided document (inclusive). The end position is relative to the order of the query. The document must contain all of the fields provided in the orderBy of this query.
 	 * @param snapshot The snapshot of the document to end at.
@@ -31,7 +30,7 @@ extern class Query {
 	 * @param options An object to configure the get behavior.
 	 * @return Promise<QuerySnapshot> A Promise that will be resolved with the results of the Query.
 	 */
-	public function get(options:?GetOptions):Promise<QuerySnapshot>;
+	public function get(?options:GetOptions):Promise<QuerySnapshot>;
 	/**
 	 * Returns true if this Query is equal to the provided one.
 	 * @param other The Query to compare against.
@@ -82,7 +81,7 @@ extern class Query {
 	public function where(field_path:String, filter_operation:WhereFilterOp, value:Any):Query;
 }
 
-enum abstract SortMethod(String) {
+@:enum abstract SortMethod(String) {
 	var ASCENDING = "asc";
 	var DESCENDING = "dec";
 }
@@ -90,7 +89,7 @@ enum abstract SortMethod(String) {
 /**
  * Filter conditions in a Query.where() clause are specified using the strings '<', '<=', '==', '>=', '>', and 'array-contains'.
  */
-enum abstract WhereFilterOp(String) from String {
+@:enum abstract WhereFilterOp(String) from String {
 	var LESS = "<";
 	var LESS_EQUALS = "<=";
 	var GREATER = ">";

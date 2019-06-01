@@ -10,7 +10,7 @@ extern class SnapshotOptions {
 	public var serverTimestamps:SnapshotOptionsValue;
 }
 
-enum abstract SnapshotOptionsValue(String) {
+@:enum abstract SnapshotOptionsValue(String) {
 	/**
 	 * pending server timestamps return an estimate based on the local clock. This estimate will differ from the final value and cause these values to change once the server result becomes available.
 	 */
