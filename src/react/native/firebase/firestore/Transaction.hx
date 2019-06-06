@@ -22,13 +22,13 @@ extern class Transaction {
 	 * @param options An object to configure the set behavior.
 	 * @return Transaction This Transaction instance. Used for chaining method calls.
 	 */
-	public function set<T:{}>(document_reference:DocumentReference, data:DocumentData<T>, ?options:SetOptions):Transaction;
+	public function set(document_reference:DocumentReference, data:DocumentData, ?options:SetOptions):Transaction;
 	/**
 	 * Updates fields in the document referred to by the provided DocumentReference. The update will fail if applied to a document that does not exist.
 	 * @param document_reference A reference to the document to be updated.
 	 * @param data An object containing the fields and values with which to update the document. Fields can contain dots to reference nested fields within the document.
 	 * @return Transaction This Transaction instance. Used for chaining method calls.	
 	 */
-	public function update<T:{}>(document_reference:DocumentReference, data:UpdateData<T>):Transaction;
+	public function update(document_reference:DocumentReference, data:UpdateData):Transaction;
 
 }

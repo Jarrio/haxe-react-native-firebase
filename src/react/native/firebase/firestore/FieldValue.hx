@@ -19,18 +19,18 @@ extern class FieldValue {
 	 * @param elements 
 	 * @return FieldValue The FieldValue sentinel for use in a call to set() or update().
 	 */
-	public static function arrayRemove(data:T, elements:Rest<T>):FieldValue;
+	public static function arrayRemove<T>(data:T, elements:Rest<T>):FieldValue;
 	/**
 	 * Returns a special value that can be used with set() or update() that tells the server to union the given elements with any array value that already exists on the server. Each specified element that doesn't already exist in the array will be added to the end. If the field being modified is not already an array it will be overwritten with an array containing exactly the specified elements.
 	 * @param data The elements to union into the array.
 	 * @param elements 
 	 * @return FieldValue
 	 */
-	public static function arrayUnion(data:T, elements:Rest<T>):FieldValue;
+	public static function arrayUnion<T:{}>(data:T, elements:Rest<T>):FieldValue;
 	/**
 	 *Returns a sentinel for use with update() to mark a field for deletion.
 	 */
-	public static delete():FieldValue;
+	public static function delete():FieldValue;
 	/**
 	 * Returns a special value that can be used with set() or update() that tells the server to increment the field's current value by the given value.
 	 * 
@@ -39,10 +39,10 @@ extern class FieldValue {
 	 * If the current field value is not of type number, or if the field does not yet exist, the transformation sets the field to the given value.
 	 * @param number The value to increment by
 	 */
-	public static increment(number:Int):FieldValue;
+	public static function increment(number:Int):FieldValue;
 	/**
 	 * Returns a sentinel used with set() or update() to include a server-generated timestamp in the written data.
 	 */
-	public static serverTimestamp():FieldValue;
+	public static function serverTimestamp():FieldValue;
 
 }

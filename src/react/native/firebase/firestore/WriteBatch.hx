@@ -25,7 +25,7 @@ extern class WriteBatch {
 	 * @param options An object to configure the set behavior.
 	 * @return WriteBatch This WriteBatch instance. Used for chaining method calls.
 	 */
-	public function set<T:{}>(document_reference:DocumentReference, data:DocumentData<T>, ?options:SetOptions):WriteBatch;
+	public function set(document_reference:DocumentReference, data:DocumentData, ?options:SetOptions):WriteBatch;
 	/**
 	 * Updates fields in the document referred to by the provided DocumentReference. The update will fail if applied to a document that does not exist.
 	 * @param document_reference A reference to the document to be updated.
@@ -33,6 +33,6 @@ extern class WriteBatch {
 	 * @return WriteBatch This WriteBatch instance. Used for chaining method calls.
 	 */
 	// @:overload(function(document_reference:DocumentReference, field_path:String, value:Any))
-	public function update<T:{}>(document_reference:DocumentReference, data:UpdateData<T>):WriteBatch;
+	public function update(document_reference:DocumentReference, data:UpdateData):WriteBatch;
 
 }

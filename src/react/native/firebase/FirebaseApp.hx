@@ -6,6 +6,7 @@ import js.Promise;
 import react.native.firebase.types.TFirebaseAppOptions;
 import react.native.firebase.messaging.Messaging;
 import react.native.firebase.firestore.Firestore;
+
 @:jsRequire('react-native-firebase', 'FirebaseApp')
 extern class FirebaseApp {
 

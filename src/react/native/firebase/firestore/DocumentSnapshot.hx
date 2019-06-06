@@ -31,7 +31,7 @@ extern class DocumentSnapshot {
 	 * @param options An options object to configure how data is retrieved from the snapshot (e.g. the desired behavior for server timestamps that have not yet been set to their final value).
 	 * @return Null<DocumentData> An Object containing all fields in the document or 'undefined' if the document doesn't exist.
 	 */
-	public function data<T:{}>(?options:SnapshotOptions):Null<DocumentData<T>>;
+	public function data(?options:SnapshotOptions):Null<DocumentData>;
 	/**
 	 * Retrieves the field specified by fieldPath. Returns undefined if the document or field doesn't exist.
 	 * 
@@ -40,7 +40,7 @@ extern class DocumentSnapshot {
 	 * @param options An options object to configure how the field is retrieved from the snapshot (e.g. the desired behavior for server timestamps that have not yet been set to their final value).
 	 * @return T(Any) The data at the specified field location or undefined if no such field exists in the document.
 	 */
-	public function get<T:{}>(field_path:String, ?options:SnapshotOptions):T;
+	public function get(field_path:String, ?options:SnapshotOptions):DocumentData;
 	/**
 	 * Returns true if this DocumentSnapshot is equal to the provided one.
 	 * @param other The DocumentSnapshot to compare against.
