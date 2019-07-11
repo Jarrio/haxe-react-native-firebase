@@ -1,11 +1,12 @@
 # haxe-react-native-firebase
 Externs for react-native firebase
 
-This has worked amazingly for me, but I have not tested it on recent versions of rn-firebase. The last known version I tested it on was "3.1.0".
+This has worked amazingly for me, and works in any npm project. Just follow the web installation over the mobile setup
 
 Known to be working:
 - Google Authentication (I used the react-native google sign-in package to create the button)
-- Real time database
+- Real time database 
+- Firestore 
 
 Can't remember if working:
 - Messaging
