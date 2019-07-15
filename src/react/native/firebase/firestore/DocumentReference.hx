@@ -55,7 +55,7 @@ extern class DocumentReference {
 	 * @param onCompletion 
 	 * @return Function An unsubscribe function that can be called to cancel the snapshot listener.
 	 */
-	public function onSnapshot(onNext:QuerySnapshot->Void = null, onError: Dynamic->Void = null, onCompletion:Void->Void = null):Function;
+	public function onSnapshot(onNext:DocumentSnapshot->Void = null, onError: Dynamic->Void = null, onCompletion:Void->Void = null):Function;
 	/**
 	 * Writes to the document referred to by this DocumentReference. If the document does not yet exist, it will be created. If you pass SetOptions, the provided data can be merged into an existing document.
 	 * @param data A map of the fields and values for the document.
