@@ -1,5 +1,5 @@
 {
-  "name": "haxe react-native-firebase",
+  "name": "react-native-firebase",
   "license": "MIT",
   "tags": [
     "react",
@@ -15,7 +15,5 @@
   "releasenote": "Initial release",
   "version": "0.1.0",
   "url": "https://github.com/jarrio/haxe-react-native-firebase",
-  "dependencies": {
-	"react-native-firebase": ""
-  }
+  "dependencies": {}
 }
