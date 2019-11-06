@@ -34,17 +34,12 @@ Firebase.initializeApp({
   }).then((loaded) -> this.setState({loaded: true})); //update state if you want
 ```
 
-Then just use as normal:
+Then just use as normal (haxe 4 function declaration, works fine with old style):
 
 ```haxe
-this.fireapp.database().ref('table_name').once(
-  EventType.Value,
-  function (snapshot, str) {
-    trace(snapshot.child('foo').val());
-  },
-  function (reject) {
-    trace('error: $reject');
-  }
+Firebase.firestore().collection('foo').onSnapshot(
+    (data) -> trace("response object" + data),
+    (data) -> trace("error object" + data)
 );
 ```
 ---
