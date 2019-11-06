@@ -34,7 +34,7 @@ Firebase.initializeApp({
   }).then((loaded) -> this.setState({loaded: true})); //update state if you want
 ```
 
-Then just use as normal (haxe 4 function declaration, works fine with old style):
+Then just use as normal:
 
 ```haxe
 Firebase.firestore().collection('foo').onSnapshot(
