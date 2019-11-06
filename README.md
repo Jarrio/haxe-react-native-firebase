@@ -1,7 +1,11 @@
 # haxe-react-native-firebase
 
-Externs for react-native firebase
+Follow the following links to use this library:
 
+1) <https://github.com/massiveinteractive/haxe-react>
+2) <https://github.com/haxe-react/haxe-react-native>
+3) <https://invertase.io/oss/react-native-firebase/>
+---
 Due to the updated firebase structure I couldn't figure out an alternative way to get this going so here's the updated usage:
 
 1) Create a file in your project root called `firebase-component-imports.js`
@@ -12,14 +16,6 @@ import "@react-native-firebase/auth";
 import "@react-native-firebase/firestore";
 ```
 This will allow the `auth` and `firestore` modules to the project
-
----
-Follow the following links to use this library:
-
-1) <https://github.com/massiveinteractive/haxe-react>
-2) <https://github.com/haxe-react/haxe-react-native>
-3) <https://invertase.io/oss/react-native-firebase/>
-
 ---
 
 Quick startup:
