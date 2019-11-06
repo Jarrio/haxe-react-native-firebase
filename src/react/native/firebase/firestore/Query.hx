@@ -1,5 +1,5 @@
 package react.native.firebase.firestore;
-
+import haxe.extern.EitherType;
 import haxe.Constraints.Function;
 /**
  * A Query refers to a Query which you can read or listen to. You can also construct refined Query objects by adding filters and ordering.
@@ -16,13 +16,13 @@ extern class Query {
 	 * @param snapshot The snapshot of the document to end at.
 	 * @return Query The created Query.
 	 */
-	public function endAt(snapshot:DocumentSnapshot):Query;
+	public function endAt(value:EitherType<String, DocumentSnapshot>):Query;
 	/**
 	 * Creates and returns a new Query that ends before the provided document (exclusive). The end position is relative to the order of the query. The document must contain all of the fields provided in the orderBy of this query.
 	 * @param snapshot The snapshot of the document to end before.
 	 * @return Query The created Query.
 	 */
-	public function endBefore(snapshot:DocumentSnapshot):Query;
+	public function endBefore(value:EitherType<String, DocumentSnapshot>):Query;
 	/**
 	 * Executes the query and returns the results as a QuerySnapshot.
 	 * 
@@ -61,16 +61,16 @@ extern class Query {
 	public function orderBy(field_path:String, ?direction:SortMethod):Query;
 	/**
 	 * Creates and returns a new Query that starts after the provided document (exclusive). The starting position is relative to the order of the query. The document must contain all of the fields provided in the orderBy of this query.
-	 * @param snapshot The snapshot of the document to start after.
+	 * @param value The snapshot of the document to start after.
 	 * @return Query The created Query.
 	 */
-	public function startAfter(snapshot:DocumentSnapshot):Query;
+	public function startAfter(value:EitherType<String, DocumentSnapshot>):Query;
 	/**
 	 * Creates and returns a new Query that starts at the provided document (inclusive). The starting position is relative to the order of the query. The document must contain all of the fields provided in the orderBy of this query.
-	 * @param snapshot The snapshot of the document to start at.
+	 * @param value The snapshot of the document to start at.
 	 * @return Query The created Query.
 	 */
-	public function startAt(snapshot:DocumentSnapshot):Query;
+	public function startAt(value:EitherType<String, DocumentSnapshot>):Query;
 	/**
 	 * Creates and returns a new Query with the additional filter that documents must contain the specified field and the value should satisfy the relation constraint provided.
 	 * @param field_path The path to compare

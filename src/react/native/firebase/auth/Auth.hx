@@ -4,6 +4,7 @@ package react.native.firebase.auth;
 import react.native.firebase.User;
 import react.native.firebase.Promise;
 
+@:jsRequire('@react-native-firebase/auth', 'default')
 extern class Auth {
 
 	/**

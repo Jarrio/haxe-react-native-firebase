@@ -3,19 +3,20 @@ package react.native.firebase;
 import react.native.firebase.messaging.Messaging;
 import react.native.firebase.auth.Auth;
 import react.native.firebase.FirebaseApp;
+import react.native.firebase.firestore.Firestore;
 import react.native.firebase.database.Database;
 import react.native.firebase.types.TFirebaseAppOptions;
 
-@:jsRequire('firebase')
+@:jsRequire('@react-native-firebase/app', 'default')
 extern class Firebase {
 	public static var apps:Array<FirebaseApp>;
 	public static function app(?name:String):FirebaseApp;	
 	public static function setLogLevel(level:Dynamic):Void;
-	public static function initializeApp(config:TFirebaseAppOptions, name:String = "[DEFAULT]"):FirebaseApp;		
-
+	public static function initializeApp(?config:TFirebaseAppOptions, name:String = "[DEFAULT]"):Promise<FirebaseApp>;
 	public static function auth(?app:FirebaseApp):Auth;
 	public static function messaging(?app:FirebaseApp):Messaging;	
 	public static function database(?app:FirebaseApp):Database;	
+	public static function firestore(?app:FirebaseApp):Firestore;	
 
 
 	// public static function database(?app:firebase.app.App):firebase.database.Database;

@@ -3,6 +3,8 @@ package react.native.firebase.firestore;
 import react.native.firebase.FirebaseApp;
 import react.native.firebase.firestore.CollectionReference;
 
+// @:keep
+// @:jsRequire('@react-native-firebase/firestore', 'default')
 extern class Firestore {
 	public var app:FirebaseApp;
     private function new();

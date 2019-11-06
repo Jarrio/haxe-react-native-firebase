@@ -1,5 +1,20 @@
 # haxe-react-native-firebase
+
 Externs for react-native firebase
+
+Due to the updated firebase structure I couldn' figure out an alternative way to get this going so here's the updated usage:
+
+1) Create a file in your project root called `firebase-component-imports.js`
+2) In your .hxml add the line `--macro includeFile('firebase-component-imports.js')`
+3) Then in this file you would add the imports manually as an example:
+```javascript
+import "@react-native-firebase/auth";
+import "@react-native-firebase/firestore";
+```
+This will allow the `auth` and `firestore` modules to the project
+
+----
+
 
 This has worked amazingly for me, and works in any npm project. Just follow the web installation over the mobile setup
 
