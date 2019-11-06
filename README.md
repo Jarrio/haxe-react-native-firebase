@@ -18,6 +18,7 @@ import "@react-native-firebase/firestore";
 This will allow the `auth` and `firestore` modules to the project
 
 for more modules go to <https://invertase.io/oss/react-native-firebase/v6> and follow existing extern structure to integrate!
+
 ---
 
 Quick startup:
