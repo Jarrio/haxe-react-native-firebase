@@ -15,9 +15,7 @@ Due to the updated firebase structure I couldn't figure out an alternative way t
 import "@react-native-firebase/auth";
 import "@react-native-firebase/firestore";
 ```
-This will allow the `auth` and `firestore` modules to the project
-
-for more modules go to <https://invertase.io/oss/react-native-firebase/v6> and follow existing extern structure to integrate!
+This will allow the `auth` and `firestore` modules to the project for more modules go to <https://invertase.io/oss/react-native-firebase/v6> and follow existing extern structure to integrate!
 
 ---
 
