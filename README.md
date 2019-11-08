@@ -1,4 +1,4 @@
-## All apis aren't finished
+## API isn't complete
 Completed APIs:
 1) Firebase
 2) Firestore
