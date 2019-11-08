@@ -19,7 +19,8 @@ app = Firebase.initializeApp({
 	apiKey: "apiKey",
 	databaseURL: "dbUrl",
 	projectId: "projectId"
-});```
+});
+```
 ---
 
 ### React-Native
