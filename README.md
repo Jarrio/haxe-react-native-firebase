@@ -32,8 +32,8 @@ Follow the following links to use this library with react-native:
 ---
 Due to the updated firebase structure I couldn't figure out an alternative way to get this going so here's the updated usage:
 
-1) Create a file in your project root called `firebase-component-imports.js`
-2) In your .hxml add the line `--macro includeFile('firebase-component-imports.js')`
+1) In your .hxml add the line `--macro includeFile('firebase-component-imports.js')`
+2) Create a file in your project root called `firebase-component-imports.js`
 3) Then in this file you would add the imports manually as an example:
 ```javascript
 import "@react-native-firebase/auth";
