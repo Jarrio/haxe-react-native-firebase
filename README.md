@@ -1,8 +1,12 @@
 # haxe-react-native-firebase
 
-Externs for react-native firebase
+Follow the following links to use this library:
 
-Due to the updated firebase structure I couldn' figure out an alternative way to get this going so here's the updated usage:
+1) <https://github.com/massiveinteractive/haxe-react>
+2) <https://github.com/haxe-react/haxe-react-native>
+3) <https://invertase.io/oss/react-native-firebase/quick-start/existing-project>
+---
+Due to the updated firebase structure I couldn't figure out an alternative way to get this going so here's the updated usage:
 
 1) Create a file in your project root called `firebase-component-imports.js`
 2) In your .hxml add the line `--macro includeFile('firebase-component-imports.js')`
@@ -11,58 +15,30 @@ Due to the updated firebase structure I couldn' figure out an alternative way to
 import "@react-native-firebase/auth";
 import "@react-native-firebase/firestore";
 ```
-This will allow the `auth` and `firestore` modules to the project
-
-----
-
-
-This has worked amazingly for me, and works in any npm project. Just follow the web installation over the mobile setup
-
-Known to be working:
-- Google Authentication (I used the react-native google sign-in package to create the button)
-- Real time database 
-- Firestore 
-
-Can't remember if working:
-- Messaging
-
----
-Follow the following links to use this library:
-
-1) <https://github.com/massiveinteractive/haxe-react>
-2) <https://github.com/haxe-react/haxe-react-native>
-3) <https://rnfirebase.io/docs/v3.1.x/getting-started>
+This will allow the `auth` and `firestore` modules to the project for more modules go to <https://invertase.io/oss/react-native-firebase/v6> and follow existing extern structure to integrate!
 
 ---
 
 Quick startup:
 ```haxe
-Firebase.app().onReady().then(
-  function(fireapp) {
-    this.fireapp = fireapp; //Save the response
-  }
-).catchError(
-  function(error) {
-    trace('Error: $error');
-  }
-);
+Firebase.initializeApp({
+    appId: "appId",
+    messagingSenderId: "senderId",
+    apiKey: "apiKey",
+    databaseURL: "dbUrl",
+    projectId: "projectId",
+    storageBucket: "storageBucket"
+  }).then((loaded) -> this.setState({loaded: true})); //update state if you want
 ```
 
 Then just use as normal:
 
 ```haxe
-this.fireapp.database().ref('table_name').once(
-  EventType.Value,
-  function (snapshot, str) {
-    trace(snapshot.child('foo').val());
-  },
-  function (reject) {
-    trace('error: $reject');
-  }
+Firebase.firestore().collection('foo').onSnapshot(
+    (data) -> trace("response object" + data),
+    (data) -> trace("error object" + data)
 );
 ```
 ---
 
-
-
-I wrote this up a fair little while ago so if there are issues, feel free to submit a PR or an issue and when I have time I'll give it a test
+I wrote this up a fair little while ago so if there are issues, feel free to submit a PR
