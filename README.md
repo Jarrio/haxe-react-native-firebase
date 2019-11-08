@@ -1,6 +1,20 @@
-# haxe-react-native-firebase
+## All apis aren't finished
+Completed APIs:
+1) Firebase
+2) Firestore
+3) [WIP] Authentication
 
-Follow the following links to use this library:
+### Works for Web as well!
+There are some api differences between react-native and web.
+
+Follow the following link to use this library with node.js (web)
+
+1) <https://www.npmjs.com/package/firebase>
+2) <https://firebase.google.com/docs/web/setup>
+
+
+---
+Follow the following links to use this library with react-native:
 
 1) <https://github.com/massiveinteractive/haxe-react>
 2) <https://github.com/haxe-react/haxe-react-native>
