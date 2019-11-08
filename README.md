@@ -8,7 +8,7 @@ There are some api differences between react-native and web.
 
 ### Web
 
-Follow the following link to use this library with node.js (web)
+Follow the following link to use this library with node.js or web
 
 1) <https://www.npmjs.com/package/firebase>
 2) <https://firebase.google.com/docs/web/setup>
