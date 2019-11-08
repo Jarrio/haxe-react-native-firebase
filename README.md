@@ -4,16 +4,25 @@ Completed APIs:
 2) Firestore
 3) [WIP] Authentication
 
-### Works for Web as well!
 There are some api differences between react-native and web.
+
+### Web
 
 Follow the following link to use this library with node.js (web)
 
 1) <https://www.npmjs.com/package/firebase>
 2) <https://firebase.google.com/docs/web/setup>
 
-
+Quick start:
+```haxe
+app = Firebase.initializeApp({
+	apiKey: "apiKey",
+	databaseURL: "dbUrl",
+	projectId: "projectId"
+});
 ---
+
+### React-Native
 Follow the following links to use this library with react-native:
 
 1) <https://github.com/massiveinteractive/haxe-react>
@@ -33,7 +42,7 @@ This will allow the `auth` and `firestore` modules to the project for more modul
 
 ---
 
-Quick startup:
+Quick start:
 ```haxe
 Firebase.initializeApp({
     appId: "appId",
