@@ -16,8 +16,7 @@ extern class Firebase {
 	public static var apps:Array<FirebaseApp>;
 	public static function app(?name:String):FirebaseApp;
 	public static function setLogLevel(level:Dynamic):Void;
-	public static function initializeApp(?config:TFirebaseAppOptions, name:String = "[DEFAULT]"):#if react
-		- native Promise<FirebaseApp> #else FirebaseApp #end;
+	public static function initializeApp(?config:TFirebaseAppOptions, name:String = "[DEFAULT]"):#if reactnative Promise<FirebaseApp> #else FirebaseApp #end;
 	public static function auth(?app:FirebaseApp):Auth;
 	public static function messaging(?app:FirebaseApp):Messaging;
 	public static function database(?app:FirebaseApp):Database;
