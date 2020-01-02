@@ -2,7 +2,9 @@
 Completed APIs:
 1) Firebase
 2) Firestore
-3) [WIP] Authentication
+3) FireStorage 
+	- API is complete but not tested 
+4) [WIP] Authentication
 
 There are some api differences between react-native and web.
 
