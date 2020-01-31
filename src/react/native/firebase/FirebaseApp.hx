@@ -1,6 +1,6 @@
 package react.native.firebase;
 
-import js.Promise;
+import js.lib.Promise;
 import react.native.firebase.auth.Auth;
 import react.native.firebase.database.Database;
 import react.native.firebase.firestore.Firestore;
